@@ -1,3 +1,31 @@
 @startuml
+left to right direction
+
+
+actor speler
+actor medewerker
+
+rectangle Vagado {
+    usecase "vragen beheren"<<CRUD>>
+    usecase "thema's beheren"<<CRUD>>
+    usecase "vragenlijsten beheren"<<CRUD>>
+
+    usecase registreren
+    usecase "vragenlijst kopen"
+    usecase "vragenlijst beantwoorden"
+    usecase "vraag beantwoorden"
+
+
+}
+
+speler -- (registreren)
+speler -- (vragenlijst kopen)
+speler -- (vragenlijst beantwoorden)
+speler -- (vraag beantwoorden)
+
+medewerker -- (vragen beheren)
+medewerker -- (thema's beheren)
+medewerker -- (vragenlijsten beheren)
+
 
 @enduml
