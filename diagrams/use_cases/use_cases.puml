@@ -12,17 +12,14 @@ rectangle Vagado {
     usecase registreren
     usecase "vragenlijst kopen"
     usecase "vragenlijst beantwoorden"
-    usecase "vraag beantwoorden"
 }
 
 speler -- (registreren)
 speler -- (vragenlijst kopen)
 speler -- (vragenlijst beantwoorden)
-speler -- (vraag beantwoorden)
 
 medewerker -- (vragen beheren)
 medewerker -- (thema's beheren)
 medewerker -- (vragenlijsten beheren)
-
 
 @enduml
