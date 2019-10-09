@@ -1,7 +1,6 @@
 @startuml
 left to right direction
 
-
 actor speler
 actor medewerker
 
@@ -14,8 +13,6 @@ rectangle Vagado {
     usecase "vragenlijst kopen"
     usecase "vragenlijst beantwoorden"
     usecase "vraag beantwoorden"
-
-
 }
 
 speler -- (registreren)
