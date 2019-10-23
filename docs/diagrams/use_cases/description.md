@@ -2,9 +2,13 @@
 
 ![Use case diagram]
 
+Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is ingelogd`.
+
 ### Use case 2: Vragenlijst Kopen
 | UC1: Registreren | |
 | --- | --- |
+| Stakeholders | MHM Games |
+| Brief description | Deze usecase beschrijft het registratieprocess |
 | Primary Actor | Speler | 
 | Precondities | - |
 | Postconditie | Speler is geregistreerd en ingelogd en aangekomen op zijn dashboard |
@@ -36,7 +40,7 @@
 ### Use case 2: Vragenlijst Kopen
 | UC2: Vragenlijst kopen | |
 | --- | --- |
-| Stakeholders | MHM Games, wilt dat spelers een vragenlijst kunnen kopen |
+| Stakeholders | MHM Games |
 | Primary Actors | Speler |
 | Precondities | Speler is ingelogd |
 | | Speler heeft voldoende munten |
@@ -56,24 +60,29 @@
 | | 4.a. [Speler heeft niet genoeg munten] |
 | | 4.a.1 Systeem toont foutmelding '*niet genoeg munten*' | 
 
-
-
-### Use case #: <UC naam>
-| UC#: <UC naam> | |
+### Use case 3: Vragenlijst beantwoorden
+| UC3: Vragenlijst beantwoorden | |
 | --- | --- |
 | Stakeholders | MHM Games |
-| Primary Actors | <Actor> |
-| Precondities | <preconditie 1> |
-| | ... |
-| Postcondities | <Postconditie> |
+| Brief description| Deze usecase beschrijft de acties die uitgevoerd worden voor het beantwoorden van een vragenlijst |
+| Primary Actors | Speler |
+| Precondities | Speler heeft de vragenlijst gekocht |
+| | Speler heeft de vragenlijst geopent |
+| Postcondities | Speler heeft de vragenlijst volledig goed beantwoordt |
 | **Main Success** | **Scenario (Basic Flow)** |
 | **Actor Action** | **Systeem Action** |
-| 1. <Actor> | |
-| | 2. <Systeem>
+| 1. Speler beantwoordt vraag | |
+| | 2. Systeem valideert antwoord |
+| | 3. Systeem bewaart score van antwoord |
+| | 4. Systeem toont vragenlijst resultaat |
 | | **Alternate Flows** |
 | **Actor action** | **Systeem Action** |
-| | 2.a. [<Conditie>] |
-| | 4.a.1 <acties> | 
-
+| | 4.a. [Niet alle vragen zijn beantwoord] |
+| | 4.a.1 Systeem toont volgende vraag |
+| | 4.a.2 Ga naar Main flow actie 1 | 
+| --- | --- |
+| | 2.a. [Antwoord is leeg] |
+| | 2.a.1 Systeem slaat antwoord over |
+| | 2.a.2 Ga naar Main flow actie 4 |
 
 [Use case diagram]: http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Jelmergu/ooad-casus-vagado/master/docs/diagrams/use_cases/use_cases.puml?cache=no
