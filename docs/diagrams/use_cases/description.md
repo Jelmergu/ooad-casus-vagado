@@ -18,10 +18,8 @@
 | | 7. Systeem geeft speler start items
 | | 8. Systeem logt speler in |
 | | 9. Systeem toont dashboard |
-
-| | Alternate Flows |
-| --- | --- |
-| Actor Actions| System Actions |
+| | **Alternate Flows** |
+| **Actor Actions** | **System Actions** |
 | | 3.a. [Gegevens zijn niet allemaal ingevuld] |
 | | 3.a.1 Systeem toont melding gegevens niet allemaal ingevuld | 
 | | 3.a.2 Systeem toont registratieformulier |
@@ -33,6 +31,7 @@
 | | 5.a. [Wachtwoord voldoet niet aan eisen] |
 | | 5.a.1 Systeem toont melding wachtwoord niet correct |
 | | 5.a.2. Systeem toont registratieformulier |
+
 
 
 
