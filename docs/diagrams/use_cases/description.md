@@ -63,19 +63,30 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 | |  5.a. [Speler heeft vragenlijst al in bezit] |
 | | 5.a.1. Systeem toont foutmelding '*U heeft deze lijst al in uw bezit*' |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Use case 3: Vragenlijst beantwoorden
+| UC3: Vragenlijst beantwoorden | |
+| --- | --- |
+| Stakeholders | MHM Games |
+| Brief description| Deze usecase beschrijft de acties die uitgevoerd worden voor het beantwoorden van een vragenlijst |
+| Primary Actors | Speler |
+| Precondities | Speler heeft de vragenlijst gekocht |
+| | Speler heeft de vragenlijst geopent |
+| Postcondities | Speler heeft de vragenlijst volledig goed beantwoordt |
+| **Main Success** | **Scenario (Basic Flow)** |
+| **Actor Action** | **Systeem Action** |
+| 1. Speler beantwoordt vraag | |
+| | 2. Systeem valideert antwoord |
+| | 3. Systeem bewaart score van antwoord |
+| | 4. Systeem toont vragenlijst resultaat |
+| | **Alternate Flows** |
+| **Actor action** | **Systeem Action** |
+| | 2.a. [Antwoord is leeg] |
+| | 2.a.1 Systeem slaat antwoord over |
+| | 2.a.2 Ga naar Main flow actie 4 |
+| --- | --- |
+| | 4.a. [Niet alle vragen zijn beantwoord] |
+| | 4.a.1 Systeem toont volgende vraag |
+| | 4.a.2 Ga naar Main flow actie 1 | 
 
 ### Use Case 4: Vragen beheren
 | UC4: Vragen wijzigen | | 
@@ -83,21 +94,20 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 | Stakeholders | MHM Games |
 | Primary Actors | Medewerker |
 | Precondities | Medewerker is bij paneel voor vragen beheren |
-| Postcondities | Vraag is aangepast|
+| Postcondities | Vraag is aangepast |
 | **Main Success** | **Scenario (Basic Flow)** |
 | **Actor Action** | **Systeem Action** |
 | 1. Medewerker kiest een vragenlijst om aan te passen | | 
 | | 2. Systeem toont vragenlijst met bijbehorende vragen |
 | 3. Medewerker wijzigt een vraag en wijzigt hiervan het antwoord | |
-| 4. Medewerker klikt op de knop opslaan | 
-| | 5. Systeem slaat vragenlijst op |
-| | 6. Systeem toont melding dat vragenlijst successvol is opgeslagen |
+| | 4. Systeem slaat vragenlijst op |
+| | 5. Systeem toont melding dat vragenlijst successvol is opgeslagen |
 | | **Alternative Flows** |
-| | 5.a.1. Fout bij het opslaan van vragenlijst |
-| | 5.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+| | 4.a. [Fout bij het opslaan van vragenlijst] |
+| | 4.a.1. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
 | --- | --- |
-| 4.a.1. Medewerker klikt op knop annuleren | | 
-| | 4.a.2. Systeem toont paneel voor vragen beheren |
+| 3.a.1. [Medewerker annuleert wijzigen] | | 
+| | 3.a.2. Systeem toont paneel voor vragen beheren |
 
 
 | UC4: Vragen aanmaken | | 
@@ -111,16 +121,15 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 | 1. Medewerker klikt op de knop '*Lijst aanmaken*' | | 
 | | 2. Systeem toont scherm om vragen aan te maken |
 | 3. Medewerker voert vragen met bijbehorende antwoorden in | |
-| 4. Medewerker verwijdert een vraag met antwoord | |
-| 5. Medewerker klikt op de knop opslaan | 
-| | 6. Systeem slaat vragenlijst op |
-| | 7. Systeem toont melding dat vragenlijst successvol is opgeslagen |
+| | 4. Systeem slaat vragenlijst op |
+| | 5. Systeem toont melding dat vragenlijst successvol is opgeslagen |
 | | **Alternative Flows** |
-| | 6.a.1. Fout bij het opslaan van vragenlijst |
-| | 6.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+| 3.a.1. [Medewerker annuleert aanmaken] | | 
+| | 3.a.2. Systeem toont paneel voor vragen beheren |
 | --- | --- |
-| 5.a.1. Medewerker klikt op knop annuleren | | 
-| | 5.a.2. Systeem toont paneel voor vragen beheren |
+| | 4.a. [Fout bij het opslaan van vragenlijst] |
+| | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+
 
 | UC4: Vragen verwijderen | | 
 | --- | --- |
@@ -133,15 +142,14 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 | 1. Medewerker kiest een lijst om aan te passen | | 
 | | 2. Systeem toont scherm met bijbehorende vragen en antwoorden van de lijst |
 | 3. Medewerker verwijderd een vraag met bijbehorende antwoord | |
-| 4. Medewerker klikt op de knop '*Opslaan*' | 
-| | 5. Systeem slaat vragenlijst op |
-| | 6. Systeem toont melding dat vragenlijst successvol is opgeslagen |
+| | 4. Systeem slaat vragenlijst op |
+| | 5. Systeem toont melding dat vragenlijst successvol is opgeslagen |
 | | **Alternative Flows** |
-| | 5.a.1. Fout bij het opslaan van vragenlijst |
-| | 5.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+| | 3.a.1. [Medewerker annuleert verwijderen] |
+| | 3.a.2. Systeem toont paneel voor vragen beheren |
 | --- | --- |
-| 4.a.1. Medewerker klikt op knop '*Annuleren*' | | 
-| | 4.a.2. Systeem toont paneel voor vragen beheren |
+| 4.a. [Fout bij het opslaan van vragenlijst] | | 
+| | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
 
 
 
@@ -175,29 +183,6 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 
 
 
-### Use case 3: Vragenlijst beantwoorden
-| UC3: Vragenlijst beantwoorden | |
-| --- | --- |
-| Stakeholders | MHM Games |
-| Brief description| Deze usecase beschrijft de acties die uitgevoerd worden voor het beantwoorden van een vragenlijst |
-| Primary Actors | Speler |
-| Precondities | Speler heeft de vragenlijst gekocht |
-| | Speler heeft de vragenlijst geopent |
-| Postcondities | Speler heeft de vragenlijst volledig goed beantwoordt |
-| **Main Success** | **Scenario (Basic Flow)** |
-| **Actor Action** | **Systeem Action** |
-| 1. Speler beantwoordt vraag | |
-| | 2. Systeem valideert antwoord |
-| | 3. Systeem bewaart score van antwoord |
-| | 4. Systeem toont vragenlijst resultaat |
-| | **Alternate Flows** |
-| **Actor action** | **Systeem Action** |
-| | 4.a. [Niet alle vragen zijn beantwoord] |
-| | 4.a.1 Systeem toont volgende vraag |
-| | 4.a.2 Ga naar Main flow actie 1 | 
-| --- | --- |
-| | 2.a. [Antwoord is leeg] |
-| | 2.a.1 Systeem slaat antwoord over |
-| | 2.a.2 Ga naar Main flow actie 4 |
+
 
 [Use case diagram]: http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Jelmergu/ooad-casus-vagado/master/docs/diagrams/use_cases/use_cases.puml?cache=no
