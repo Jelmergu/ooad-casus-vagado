@@ -40,21 +40,25 @@
 | Primary Actors | Speler |
 | Precondities | Speler is ingelogd |
 | | Speler heeft voldoende munten |
-| | Gebruiker is in de shop|
+| | Speler is in de shop|
 | Postcondities | Speler heeft een nieuwe vragenlijst gekocht |
 | **Main Success** | **Scenario (Basic Flow)** |
 | **Actor Action** | **Systeem Action** |
-| 1. Gebruiker kiest gewenste vragenlijst | |
+| 1. Speler kiest gewenste vragenlijst | |
 | | 2. Systeem geeft vragenlijst weer met opties om deze aan te schaffen |
-| 3. Gebruiker koopt gewenste vragenlijst | |
-| | 4. Systeem controleert of gebruiker genoeg munten heeft |
-| | 5. Systeem trekt de waarde in munten van de vragenlijst af van het aantal munten van de speler|
-| | 6. Systeem voegt de vragenlijst toe aan de informatie van de speler |
-| | 7. Systeem toont scherm met informatie over de voltooide aankoop |
+| 3. Speler koopt gewenste vragenlijst | |
+| | 4. Systeem controleert of Speler genoeg munten heeft |
+| | 5. Systeem controleert of Speler lijst al niet bezit |
+| | 6. Systeem trekt de waarde in munten van de vragenlijst af van het aantal munten van de speler|
+| | 7. Systeem voegt de vragenlijst toe aan de informatie van de speler |
+| | 8. Systeem toont melding '*U heeft de vragenlijst met success gekocht*' |
 | | **Alternate Flows** |
 | **Actor action** | **Systeem Action** |
 | | 4.a. [Speler heeft niet genoeg munten] |
 | | 4.a.1 Systeem toont foutmelding '*niet genoeg munten*' | 
+| --- | --- |
+| |  5.a. [Speler heeft vragenlijst al in bezit] |
+| | 5.a.1. Systeem toont foutmelding '*U heeft deze lijst al in uw bezit*' |
 
 
 
