@@ -36,6 +36,31 @@
 
 
 
+
+| UC2: Vragenlijst kopen | |
+| --- | --- |
+| Stakeholders | MHM Games, wilt dat spelers een vragenlijst kunnen kopen |
+| Primary Actors | Speler |
+| Precondities | Is ingelogd. Speler heeft voldoende munten |
+| Postcondities | Speler heeft een nieuwe vragenlijst gekocht |
+| Models | Use Case Diagram Vagado |
+| **Main Success** | **Scenario (Basic Flow)** |  
+|Description | Speler heeft een vragenlijst gekocht met de beschikbare munten en kan nu de vragenlijst beantwoorden |
+| Actor Action | System Action |
+| 1. Gebruiker is bij de Vagado-shop | |
+| 2. Gebruiker kiest gewenste vragenlijst | |
+| | 3. Systeem geeft vragenlijst weer met opties om deze aan te schaffen |
+| 4. Gebruiker koopt gewenste vragenlijst | |
+| | 5. Systeem controlleerd of gebruiker genoeg munten heeft |
+| | 6. Systeem trekt de waarde in munten van de vragenlijst af van de aantal munten van de speler|
+| | 7. Systeem voegt de vragenlijst toe aan de informatie van de speler |
+| | 8. Systeem laat scherm zien met informatie van de voltooide aankoop |
+| **Extensions** | **(Alternative Flow)** |  
+| Description| Speler heeft niet genoeg munten en krijgt een foutmelding |
+| Actor action | System Action |
+| | 3a.1 Systeem controlleerd of speler genoeg munten heeft |
+| | 3a.2 Systeem laat foutmelding zien aan speler dat de speler geen genoeg munten heeft | 
+
   
 
 
