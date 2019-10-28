@@ -143,24 +143,78 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 | | 2. Systeem toont scherm met bijbehorende vragen en antwoorden van de lijst |
 | 3. Medewerker verwijderd een vraag met bijbehorende antwoord | |
 | | 4. Systeem slaat vragenlijst op |
-| | 5. Systeem toont melding dat vragenlijst successvol is opgeslagen |
+| | 5. Systeem toont melding dat vragenlijst successvol is verwijderd |
 | | **Alternative Flows** |
 | | 3.a.1. [Medewerker annuleert verwijderen] |
 | | 3.a.2. Systeem toont paneel voor vragen beheren |
 | --- | --- |
-| 4.a. [Fout bij het opslaan van vragenlijst] | | 
+| 4.a. [Fout bij het verwijderen van vragenlijst] | | 
+| | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+
+### Use case 5: Thema's Beheren
+| UC5: Thema wijzigen | | 
+| --- | --- |
+| Stakeholders | MHM Games |
+| Primary Actors | Medewerker |
+| Precondities | Medewerker is bij paneel voor thema's beheren |
+| Postcondities | Thema is aangepast |
+| **Main Success** | **Scenario (Basic Flow)** |
+| **Actor Action** | **Systeem Action** |
+| 1. Medewerker kiest een thema om aan te passen | | 
+| | 2. Systeem toont thema met bijbehorende informatie |
+| 3. Medewerker wijzigt een de informatie van een thema | |
+| | 4. Systeem slaat thema op |
+| | 5. Systeem toont melding dat thema successvol is opgeslagen |
+| | **Alternative Flows** |
+| 3.a.1. [Medewerker annuleert wijzigen] | | 
+| | 3.a.2. Systeem toont paneel voor thema's beheren |
+| --- | --- |
+| | 4.a. [Fout bij het opslaan van thema] |
+| | 4.a.1. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+
+
+| UC5: Thema aanmaken | | 
+| --- | --- |
+| Stakeholders | MHM Games |
+| Primary Actors | Medewerker |
+| Precondities | Medewerker is bij paneel voor thema's beheren |
+| Postcondities | Thema aangemaakt |
+| **Main Success** | **Scenario (Basic Flow)** |
+| **Actor Action** | **Systeem Action** |
+| 1. Medewerker klikt op de knop '*Thema aanmaken*' | | 
+| | 2. Systeem toont scherm om thema aan te maken |
+| 3. Medewerker voert thema met informatie in | |
+| | 4. Systeem slaat thema op |
+| | 5. Systeem toont melding dat thema successvol is opgeslagen |
+| | **Alternative Flows** |
+| 3.a.1. [Medewerker annuleert aanmaken] | | 
+| | 3.a.2. Systeem toont paneel voor thema beheren |
+| --- | --- |
+| | 4.a. [Fout bij het opslaan van thema] |
 | | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
 
 
+| UC5: Thema verwijderen | | 
+| --- | --- |
+| Stakeholders | MHM Games |
+| Primary Actors | Medewerker |
+| Precondities | Medewerker is bij paneel voor thema's beheren |
+| Postcondities | Thema verwijdert |
+| **Main Success** | **Scenario (Basic Flow)** |
+| **Actor Action** | **Systeem Action** |
+| 1. Medewerker kiest een thema om aan te passen | | 
+| | 2. Systeem toont thema met informatie |
+| 3. Medewerker verwijdert een thema | |
+| | 4. Systeem verwijdert thema |
+| | 5. Systeem toont melding dat thema successvol is verwijderd |
+| | **Alternative Flows** |
+| | 3.a.1. [Medewerker annuleert verwijderen] |
+| | 3.a.2. Systeem toont paneel voor thema beheren |
+| --- | --- |
+| 4.a. [Fout bij het verwijderen van thema] | | 
+| | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
 
-
-
-
-
-
-
-
-### Use case 6 Vragenlijsten beheren
+### Use case 6: Vragenlijsten beheren
 | UC6: Vragenlijst verwijderen | | 
 | --- | --- |
 | Stakeholders | MHM Games |
