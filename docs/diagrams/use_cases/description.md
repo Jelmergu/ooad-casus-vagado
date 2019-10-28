@@ -235,6 +235,46 @@ Voor alle usecases, behalve UC1 Registreren, geldt als preconditie: `<Actor> is 
 | 3.a.1. Medewerker klikt op knop '*Nee*' | | 
 | | 3.a.2. Systeem toont paneel voor vragen beheren |
 
+| UC6: Vragenlijst wijzigen | | 
+| --- | --- |
+| Stakeholders | MHM Games |
+| Primary Actors | Medewerker |
+| Precondities | Medewerker is bij paneel voor vragen beheren |
+| Postcondities | Vragenlijst gewijzigd |
+| **Main Success** | **Scenario (Basic Flow)** |
+| **Actor Action** | **Systeem Action** |
+| 1. Medewerker kiest een lijst om te wijzigen en klikt op de knop '*Wijzigen*' | | 
+| | 2. Systeem toont vragenlijst met bijbehorende informatie |
+| 3. Medewerker wijzigt de gekozen gegevens | |
+|  4. Medewerker klikt op '*Opslaan*' ||
+| | 5. Systeem toont melding dat vragenlijst successvol is opgeslagen |
+| | **Alternative Flows** |
+| | 4.a.1. Fout bij het opslaan van vragenlijst |
+| | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+| --- | --- |
+| 4.b.1. Medewerker klikt op knop '*Annuleren*' | | 
+| | 4.b.2. Systeem toont paneel voor vragenlijsten beheren |
+
+
+| UC6: Vragenlijst aanmaken | | 
+| --- | --- |
+| Stakeholders | MHM Games |
+| Primary Actors | Medewerker |
+| Precondities | Medewerker is bij paneel voor vragen beheren |
+| Postcondities | Vragenlijst gewijzigd |
+| **Main Success** | **Scenario (Basic Flow)** |
+| **Actor Action** | **Systeem Action** |
+| 1. Medewerker klikt op de knop '*Vragenlijst aanmaken*' | | 
+| 3. Medewerker voert bijbehorende gegevens in | |
+| 4. Medewerker klikt op '*Opslaan*' | |
+| | 5. Systeem toont melding dat vragenlijst successvol is opgeslagen |
+| | **Alternative Flows** |
+| | 4.a.1. Fout bij het opslaan van vragenlijst |
+| | 4.a.2. Systeem toont foutmelding '*Er is iets fouts gegaan*'|
+| --- | --- |
+| 4.b.1. Medewerker klikt op knop '*Annuleren*' | | 
+| | 4.b.2. Systeem toont paneel voor vragenlijsten beheren |
+
 
 
 
