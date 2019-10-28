@@ -1,35 +1,41 @@
 @startuml
+autoactivate on
+hide footbox
 
 actor Gebruiker
 participant Speler
+participant "s:Speler"
 participant Vragenlijst
+participant "v:Vragenlijst"
 
-Gebruiker -> Speler : Registreren()
+Gebruiker -> Speler : registreren()
     alt success
-        Speler -> Speler : ValidateInformation()
-        Speler -> Speler : IsUsernameAvailable()
-        alt :success
-        Speler -> Speler : ValidatePassword()
-
-        Speler -> Speler : C =  CreateUser()
-        Speler -> Speler : AddCoins(C, 100);
-        Speler -> Vragenlijst : AddVragenlijstToNewSpeler(C)
-        Vragenlijst -> Vragenlijst : V = GetRandomVragenLijst()
-        Vragenlijst -> Vragenlijst : AddVragenlijstToNewSpeler();
-        Speler -> Gebruiker : Information validated succesfully
-        else
-        Speler -> Speler : ValidatePassword()
-        Speler -> Gebruiker : Password not valid
+        Speler -> Speler : validateInformation()
+        Speler -> Speler : isUsernameAvailable()
+        return usernameAvailable
+        Speler -> Speler : isValidPassword()
+        return validPassword
+        return validInfo
+        alt validInfo = true
+            Speler -> Speler : createSpeler()
+            return s = Speler
+            Speler -> "s:Speler" : register()
+            "s:Speler" -> "s:Speler" : addCoins(100)
+            return
+            "s:Speler" -> Vragenlijst : getVragenlijst()
+            Vragenlijst -> "v:Vragenlijst" **: create()
+            return v = Vragenlijst
+            |||
+            return
+            return Informatie successvol verwerkt
+        else validInfo = false
+            Speler -[#FFFFFF]> Speler
+           Speler --> Gebruiker : Informatie niet correct
         end
-    else fail
-        Speler -> Gebruiker : Username is taken | Information not valid
-    end
+
 
 @enduml
 
 @startuml
-actor Gebruiker
-participant Speler
-participant Vragenlijst
-participant 
+help skinparam
 @enduml
