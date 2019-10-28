@@ -1,0 +1,29 @@
+@startuml
+hide footbox
+autoactivate on
+
+actor Speler
+
+participant "sv:Speler_Vragenlijst"
+participant "svv:Speler_Vragenlijst_Vraag"
+participant "v:Vraag"
+participant Vragenlijst
+
+Speler -> "sv:Speler_Vragenlijst" : beantwoordVragenlijst()
+loop 10 keer
+    "sv:Speler_Vragenlijst" -> "svv:Speler_Vragenlijst_Vraag": stelVraag()
+        "svv:Speler_Vragenlijst_Vraag" -> "Vragenlijst" : getVraag()
+        "Vragenlijst" -> "v:Vraag" **: create()
+        deactivate "Vragenlijst"
+        deactivate "svv:Speler_Vragenlijst_Vraag"
+        deactivate "sv:Speler_Vragenlijst"
+        Speler -> "sv:Speler_Vragenlijst" : beantwoordVraag(antwoord, v)
+        "sv:Speler_Vragenlijst" -> "svv:Speler_Vragenlijst_Vraag" : beantwoordVraag(antwoord, v)
+        "svv:Speler_Vragenlijst_Vraag" -> "svv:Speler_Vragenlijst_Vraag":  setAntwoord(antwoord)
+    "svv:Speler_Vragenlijst_Vraag" --> "sv:Speler_Vragenlijst"
+    deactivate "svv:Speler_Vragenlijst_Vraag"
+    deactivate "sv:Speler_Vragenlijst"
+end
+
+
+@enduml
