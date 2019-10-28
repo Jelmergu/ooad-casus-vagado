@@ -1,0 +1,35 @@
+@startuml
+
+actor Gebruiker
+participant Speler
+participant Vragenlijst
+
+Gebruiker -> Speler : Registreren()
+    alt success
+        Speler -> Speler : ValidateInformation()
+        Speler -> Speler : IsUsernameAvailable()
+        alt :success
+        Speler -> Speler : ValidatePassword()
+
+        Speler -> Speler : C =  CreateUser()
+        Speler -> Speler : AddCoins(C, 100);
+        Speler -> Vragenlijst : AddVragenlijstToNewSpeler(C)
+        Vragenlijst -> Vragenlijst : V = GetRandomVragenLijst()
+        Vragenlijst -> Vragenlijst : AddVragenlijstToNewSpeler();
+        Speler -> Gebruiker : Information validated succesfully
+        else
+        Speler -> Speler : ValidatePassword()
+        Speler -> Gebruiker : Password not valid
+        end
+    else fail
+        Speler -> Gebruiker : Username is taken | Information not valid
+    end
+
+@enduml
+
+@startuml
+actor Gebruiker
+participant Speler
+participant Vragenlijst
+participant 
+@enduml

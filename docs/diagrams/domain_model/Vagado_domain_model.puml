@@ -5,7 +5,9 @@ skinparam ranksep 100
 class Thema
 class Vragenlijst
 class Vraag
-class Speler
+class Speler{
+    Munten
+}
 class Speler_Vragenlijst
 class Speler_Vragenlijst_Vraag {
     antwoord
