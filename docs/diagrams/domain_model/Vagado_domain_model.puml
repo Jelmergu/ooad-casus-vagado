@@ -1,0 +1,21 @@
+@startuml
+skinparam nodesep 100
+skinparam ranksep 100
+
+class Thema
+class Vragenlijst
+class Vraag
+class Speler
+class Speler_Vragenlijst
+class Speler_Vragenlijst_Vraag {
+    antwoord
+}
+
+Vragenlijst "0..*"--"1" Thema : heeft >
+Speler_Vragenlijst "0..*"-d-"0..*" Vraag : is beantwoord >
+Speler "0..*"--"0..*" Vragenlijst : bezit >
+Vragenlijst "0..*"-r-"1..*" Vraag : bestaat uit >
+(Speler, Vragenlijst) *-- Speler_Vragenlijst
+
+(Speler_Vragenlijst, Vraag) *-- Speler_Vragenlijst_Vraag
+@enduml
